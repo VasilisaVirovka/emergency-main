@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/custom.css" />
     <link rel="stylesheet" href="css/fonts.css" />
@@ -11,18 +12,41 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/burger.css" />
     <link rel="stylesheet" href="css/cards.css" />
-    <link rel="icon" type="image/png" href="img/fav.png" />
-    <title>Emergency Site</title>
+    <link rel="stylesheet" href="css/picture.css" />
+
+    <!-- PNG fallback (valgfrit) -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="img/favicon/Eksempel_logo_(favicon).svg"
+    />
+
+    <!-- SVG favicon (min egen) -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="img/favicon/Eksempel_logo_(favicon).svg"
+    />
+
+    <title>Hudpleje Univers</title>
   </head>
+
   <body id="frontpage">
     <header>
       <nav>
         <div id="logotype-wrapper" class="logo">
-          <a href="index.html"> LOGO-TYPE </a>
+          <a href="index.html">
+            <img
+              src="img/favicon/Eksempel_logo_(favicon).svg"
+              alt="Hudpleje Univers Logo"
+              id="logo"
+            />
+          </a>
         </div>
         <ul class="menu">
-          <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
-          <li><a class="menuItem" href="register.html">Indberet</a></li>
+          <li><a class="menuItem" href="produkt.html">Produkter</a></li>
+          <li><a class="menuItem" href="instruction.html">Guides</a></li>
+          <li><a class="menuItem" href="register.html">Kontakt</a></li>
         </ul>
         <button class="burger">
           <span class="line"></span>
@@ -31,58 +55,134 @@
         </button>
       </nav>
     </header>
+
     <section id="main-disclamer">
-      <div id="main-disclamer-content">
-        <img src="warning" alt="ICON" />
+ <!-- Klikbart billede (åbner popover) -->
+<button type="button" popovertarget="billede-popup" class="image-button">
+  <img
+    src="img/Firefly_Grafik-idé_Illustration_med_produktet_ACO_Spot_Treatment.webp"
+    alt="ACO Spot Treatment"
+  />
+</button>
+
+<!-- Popover med stort billede -->
+<div id="billede-popup" popover="auto" class="image-popover">
+  <!-- Luk-knap -->
+  <button
+    type="button"
+    popovertarget="billede-popup"
+    popovertargetaction="hide"
+    class="close-popover"
+    aria-label="Luk billede"
+  >
+    &times;
+  </button>
+
+  <img
+    src="img/Firefly_Grafik-idé_Illustration_med_produktet_ACO_Spot_Treatment.webp"
+    alt="ACO Spot Treatment – stor version"
+  />
+</div>
+
+
+
+
         <div>
-          <h1>OVERSKRIFT</h1>
-          <p class="sub">Underrubrik</p>
+          <h1>Din guide til ren hud</h1>
+          <p class="sub">Effektive produkter og tips mod uren hud</p>
         </div>
       </div>
     </section>
+
     <main>
       <section id="daily">
         <article class="daily_card">
-          <img src="" alt="teaser_img" />
+          <img src="img/Basiron.webp" alt="Basiron 5% Gel" />
           <div class="daily_text">
-            <h2>Teaser</h2>
+            <h2>Basiron 5% Gel</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              magnam ducimus ea, sed minima asperiores.
+              Bekæmper bakterier og reducerer inflammation. Brug punktvist og
+              kombiner med fugtpleje.
             </p>
-            <a href="" class="cta_btn">Se mere</a>
+            <a href="produkt.html" class="cta_btn">Se mere</a>
           </div>
         </article>
+
         <article class="daily_card">
-          <img src="" alt="teaser_img" />
+          <img
+            src="img/CeraveBlemishControlCleanser.webp"
+            alt="CeraVe Blemish Control Cleanser"
+          />
           <div class="daily_text">
-            <h2>Teaser</h2>
+            <h2>CeraVe Blemish Control Cleanser</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              magnam ducimus ea, sed minima asperiores.
+              Skånsom rens med salicylsyre og ceramider, der styrker
+              hudbarrieren.
             </p>
-            <a href="" class="cta_btn">Se mere</a>
+            <a href="produkter.html#cerave" class="cta_btn">Se mere</a>
+          </div>
+        </article>
+
+        <article class="daily_card">
+          <img src="img/AcoSpotTreatment.webp" alt="ACO Spot Treatment" />
+          <div class="daily_text">
+            <h2>ACO Spot Treatment</h2>
+            <p>
+              Reducerer rødme og hævelse hurtigt. Brug kun på det berørte
+              område.
+            </p>
+            <a href="produkter.html#aco" class="cta_btn">Se mere</a>
           </div>
         </article>
       </section>
+
       <section id="breaking">
         <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
+          <h3>Slip af med bumser – hurtigt og sikkert</h3>
+          <p>De bedste metoder og produkter til en ren hud.</p>
+          <img src="img/Basiron.webp" alt="Basiron artikel" />
+          <a class="cta_btn" href="guides.html#bumser">Læs mere</a>
         </article>
+
         <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
+          <h3>Sådan renser du huden uden at skade den:</h3>
+          <p>Guide til den perfekte hudplejerutine.</p>
+          <img
+            src="img/CeraveBlemishControlCleanser.webp"
+            alt="Rens guide"
+          />
+          <button
+            class="cta_btn_1"
+            popovertarget="popup-news-1"
+            type="button"
+          >
+            Læs mere
+          </button>
         </article>
+
         <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
+          <h3>Fjern irriterende spots hurtigt</h3>
+          <p>ACO Spot Treatment – præcis og effektiv.</p>
+          <img src="img/AcoSpotTreatment.webp" alt="ACO spot guide" />
+          <a class="cta_btn" href="guides.html#spot">Læs mere</a>
+        </article>
+
+        <article id="popup-news-1" popover class="popup-card">
+          <button
+            popovertarget="popup-news-1"
+            popovertargetaction="hide"
+            class="popup-close"
+            type="button"
+          >
+            Luk
+          </button>
+
+          <h3>Sådan renser du huden uden at skade den</h3>
+          <p><strong>Rens huden korrekt – undgå fejlene</strong></p>
+          <p>
+            <strong>Overskrift:</strong> Sådan renser du huden uden at skade
+            den...
+          </p>
         </article>
       </section>
     </main>
@@ -90,30 +190,30 @@
     <footer>
       <nav class="some">
         <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Pinterest</a></li>
+          <li><a href="#">YouTube</a></li>
         </ul>
       </nav>
       <nav class="another">
         <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
+          <li><a href="produkter.html">Produkter</a></li>
+          <li><a href="guides.html">Guides</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="#">Om os</a></li>
         </ul>
       </nav>
       <nav class="yetanother">
         <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
+          <li><a href="#">Privatlivspolitik</a></li>
+          <li><a href="#">Cookies</a></li>
+          <li><a href="#">Handelsbetingelser</a></li>
+          <li><a href="#">© 2025 Hudpleje Univers</a></li>
         </ul>
       </nav>
     </footer>
-    <script src="js/burger.js"></script>
-    <!-- <script src="js/main.js"></script> -->
+
+    <script src="js/burger.js" defer></script>
   </body>
 </html>
