@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Kontakt os – Hudpleje</title>
+
+    <!-- Dit eksisterende design -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/custom.css" />
     <link rel="stylesheet" href="css/fonts.css" />
@@ -12,18 +16,20 @@
     <link rel="stylesheet" href="css/burger.css" />
     <link rel="stylesheet" href="css/cards.css" />
     <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/picture.css" />
     <link rel="icon" type="image/png" href="img/fav.png" />
-    <title>Emergency Site</title>
   </head>
+
   <body id="register">
     <header>
       <nav>
         <div id="logotype-wrapper" class="logo">
-          <a href="index.html"> LOGO-TYPE </a>
+          <a href="index.html"> Hudpleje </a>
         </div>
         <ul class="menu">
-          <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
-          <li><a class="menuItem" href="register.html">Indberet</a></li>
+          <li><a class="menuItem" href="instruction.html">Hudplejetips</a></li>
+          <li><a class="menuItem active" href="register.html">Kontakt os</a></li>
+          <li><a class="menuItem" href="produkt.html">Produkter</a></li>
         </ul>
         <button class="burger">
           <span class="line"></span>
@@ -34,48 +40,125 @@
     </header>
 
     <main>
-      <h1>INDBERET</h1>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Kontakt os</h1>
+          <p>
+            Har du spørgsmål om hudpleje, produkter eller ingredienser?
+            Udfyld formularen herunder – vi vender tilbage hurtigst muligt.
+          </p>
+          <div class="cta-row">
+            <a class="btn" href="index.html">Tilbage til forsiden</a>
+          </div>
+        </div>
+        <img
+          class="hero-illustration"
+          src="img/favicon/Eksempel_logo_(favicon).svg"
+          alt="Hudplejeillustration"
+        />
+      </section>
+
+      <!-- Kontaktformular -->
       <section id="form-section">
         <article id="form-info">
-          <h2>Overskrift</h2>
-          <p>Tekst</p>
+          <h2>Skriv til os</h2>
+          <p>Udfyld felterne herunder og tryk <strong>“Send besked”</strong>.</p>
         </article>
-        <form id="webform"></form>
-      </section>
-      <section id="form-summary">
-        <h2>Summary</h2>
-        <article>
-          <p class="placeholder">Opsummering</p>
-        </article>
+
+        <form id="webform" class="contact-form" novalidate>
+          <div class="form-row">
+            <label for="name">Navn</label>
+            <input id="name" name="name" type="text" placeholder="Dit navn" required />
+          </div>
+
+          <div class="form-row">
+            <label for="email">E-mail</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="din@mail.dk"
+              inputmode="email"
+              required
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="topic">Emne</label>
+            <select id="topic" name="topic" required>
+              <option value="" selected disabled>Vælg emne…</option>
+              <option>Produktspørgsmål</option>
+              <option>Hudtype-rådgivning</option>
+              <option>Feedback til siden</option>
+              <option>Andet</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Besked</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Skriv din besked her…"
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-row consent">
+            <input id="consent" name="consent" type="checkbox" value="Ja" required />
+            <label for="consent">
+              Jeg accepterer, at min henvendelse må behandles for at kunne besvares.
+            </label>
+          </div>
+
+          <div class="cta-row">
+            <button type="submit" class="btn">Send besked</button>
+            <a class="btn secondary" href="index.html">Annullér</a>
+          </div>
+        </form>
+
+        <!-- Output / Dataindsamling -->
+        <section id="form-summary" class="output">
+          <h2>Dataindsamling</h2>
+          <p>Navn: <span id="name_output"></span></p>
+          <p>E-mail: <span id="email_output"></span></p>
+          <p>Emne: <span id="topic_output"></span></p>
+          <p>Besked: <span id="message_output"></span></p>
+          <p>Samtykke: <span id="consent_output"></span></p>
+        </section>
       </section>
     </main>
+
     <footer>
       <nav class="some">
         <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
+          <li><a href="">Facebook</a></li>
+          <li><a href="">Instagram</a></li>
+          <li><a href="">TikTok</a></li>
+          <li><a href="">YouTube</a></li>
         </ul>
       </nav>
       <nav class="another">
         <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
+          <li><a href="">Om os</a></li>
+          <li><a href="">Privatlivspolitik</a></li>
+          <li><a href="">Handelsbetingelser</a></li>
+          <li><a href="">Kontakt</a></li>
         </ul>
       </nav>
       <nav class="yetanother">
         <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
+          <li><a href="">FAQ</a></li>
+          <li><a href="">Produkter</a></li>
+          <li><a href="">Hudtyper</a></li>
+          <li><a href="">Inspiration</a></li>
         </ul>
       </nav>
     </footer>
+
     <script src="js/burger.js"></script>
-    <!-- <script src="js/main.js"></script> -->
+    <script src="js/form.js"></script>
   </body>
 </html>
